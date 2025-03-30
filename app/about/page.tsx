@@ -65,7 +65,8 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">코딩섬의 철학</h2>
           <p className="text-lg leading-relaxed">
-            우리는 '빠른 개발'보다 '제대로 된 개발'을 지향합니다.
+            우리는 &apos;빠른 개발&apos;보다 &apos;제대로 된 개발&apos;을
+            지향합니다.
             <br />
             모든 프로젝트는 고객의 니즈와 브랜드 본질을 정확히 이해한 후,
             <br />

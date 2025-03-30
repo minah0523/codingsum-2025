@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -207,7 +209,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="block rounded-lg overflow-hidden shadow hover:shadow-lg transition"
               >
-                <img
+                <Image
                   src={item.img}
                   alt={item.title}
                   className="w-full h-48 object-cover"
@@ -228,8 +230,8 @@ export default function Home() {
           <div className="space-y-8">
             <blockquote className="bg-white p-6 rounded-xl shadow">
               <p className="text-gray-700 italic">
-                "기획부터 마무리까지 정말 꼼꼼하게 도와주셨어요. 앞으로도 계속
-                맡기고 싶어요."
+                &quot;기획부터 마무리까지 정말 꼼꼼하게 도와주셨어요. 앞으로도
+                계속 맡기고 싶어요.&quot;
               </p>
               <span className="block mt-4 font-semibold text-blue-800">
                 – 스타트업 대표 이○○
@@ -237,8 +239,8 @@ export default function Home() {
             </blockquote>
             <blockquote className="bg-white p-6 rounded-xl shadow">
               <p className="text-gray-700 italic">
-                "말도 안 되는 유지비 받던 업체에서 옮기길 정말 잘했습니다.
-                결과물도 훌륭해요."
+                &quot;말도 안 되는 유지비 받던 업체에서 옮기길 정말 잘했습니다.
+                결과물도 훌륭해요.&quot;
               </p>
               <span className="block mt-4 font-semibold text-blue-800">
                 – 쇼핑몰 운영자 김○○
