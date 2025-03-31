@@ -43,7 +43,7 @@ export default function Contact() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-800 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-700"
+                className="bg-blue-800 text-white font-semibold px-6 py-3 rounded-full hover:bg-blue-900"
               >
                 문의 보내기
               </button>

@@ -61,7 +61,7 @@ export default function About() {
       </section>
 
       {/* Our Philosophy */}
-      <section className="py-20 bg-blue-800 text-white">
+      <section className="py-20 bg-blue-900 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">코딩섬의 철학</h2>
           <p className="text-lg leading-relaxed">
@@ -92,7 +92,7 @@ export default function About() {
           </p>
           <a
             href="/contact"
-            className="inline-block bg-blue-800 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-700"
+            className="inline-block bg-blue-800 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-blue-900"
           >
             상담 문의하기
           </a>

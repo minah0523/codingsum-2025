@@ -70,7 +70,7 @@ export default function Promote() {
               <div key={index} className="bg-white rounded-xl shadow p-6">
                 <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                 <p className="text-gray-600 mb-4">{item.desc}</p>
-                <p className="text-blue-700 font-bold">{item.price}</p>
+                <p className="text-blue-800 font-bold">{item.price}</p>
               </div>
             ))}
           </div>

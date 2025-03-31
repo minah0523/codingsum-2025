@@ -1,5 +1,4 @@
 "use client";
-"use client";
 
 import {
   CheckCircleIcon,
@@ -8,79 +7,10 @@ import {
   ShieldCheckIcon,
   SwatchIcon,
   UserGroupIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
 } from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
-
-const slides = [
-  {
-    title: "템플릿 웹사이트, 정말 효율적일까요?",
-    content: (
-      <>
-        템플릿은 빠르게 제작되지만, 업종별 컨셉과 흐름을 반영하기 어렵습니다.
-        <br />
-        단순히 이미지와 텍스트만 바꾸는 웹사이트는{" "}
-        <strong>브랜드 가치를 반영하기 힘듭니다.</strong>
-        <br />
-        직접 수정이 쉬운 빌더형 사이트는{" "}
-        <strong>오히려 디자인을 망칠 수 있으며</strong>, 수정 요청 시 추가
-        비용이 발생할 수 있습니다.
-      </>
-    ),
-    bg: "/img/brain.jpg",
-  },
-  {
-    title: "저렴한 값에는 이유가 있습니다. 더 이상 속지 마세요.",
-    content: (
-      <>
-        웹빌더 템플릿으로 작업하는 <strong>공장형 업체</strong>의 경우 간단한
-        수정이나 기본적인 유지보수에도 <strong>지속적인 유지비</strong>를
-        요구합니다.
-        <br />
-        고객의 니즈를 무시하고 진행하는 템플릿 기반 제작이나 퍼블리싱 미완료
-        사례, 과도한 유지비 요구 업체에 주의하세요.
-      </>
-    ),
-    bg: "/img/web2.jpg",
-  },
-  {
-    title: "실력있는 진짜 개발팀과 함께하세요.",
-    content: (
-      <>
-        급하게, 저렴하게 만든 홈페이지는 금방 한계를 드러냅니다.
-        <br />
-        저희는 <strong>투명한 견적과 여러번의 피드백, 지속적인 관리</strong>로
-        신뢰를 쌓아왔습니다.
-        <br />
-        1년에 한 번, 길게는 5~10년에 한 번 만드는 웹사이트.{" "}
-        <strong>제대로 된 파트너 코딩섬과 함께하세요.</strong>
-      </>
-    ),
-    bg: "/img/developer.jpg",
-  },
-];
+import Carousel from "./components/Carousel";
 
 export default function Home() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const current = slides[index];
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % slides.length);
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -110,7 +40,7 @@ export default function Home() {
       </section>
 
       {/* Why CODINGSUM Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 px-10 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-start lg:justify-between">
             <div className="mb-10 lg:mb-0 lg:w-1/2">
@@ -188,41 +118,7 @@ export default function Home() {
       </section>
 
       {/* Carousel Section */}
-      <section
-        className="relative bg-cover bg-center text-white transition-all duration-700 overflow-hidden"
-        style={{ backgroundImage: `url(${current.bg})`, height: "400px" }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col justify-center h-full">
-          <h2 className="text-3xl font-bold mb-6">{current.title}</h2>
-          <p className="text-lg leading-relaxed text-white/90">
-            {current.content}
-          </p>
-          <div className="flex justify-center space-x-2 mt-6">
-            {slides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setIndex(i)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  i === index ? "bg-white" : "bg-white/30"
-                }`}
-              ></button>
-            ))}
-          </div>
-        </div>
-        <button
-          onClick={() => setIndex((index - 1 + slides.length) % slides.length)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 p-2 rounded-full"
-        >
-          <ChevronLeftIcon className="text-white w-6 h-6" />
-        </button>
-        <button
-          onClick={() => setIndex((index + 1) % slides.length)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/60 p-2 rounded-full"
-        >
-          <ChevronRightIcon className="text-white w-6 h-6" />
-        </button>
-      </section>
+      <Carousel />
 
       {/* 패키지 소개 섹션 */}
       <section className="py-20 bg-gray-50">

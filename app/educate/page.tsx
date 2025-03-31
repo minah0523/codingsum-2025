@@ -91,12 +91,12 @@ export default function Educate() {
         </div>
       </section>
 
-      <section className="py-16 bg-blue-800 text-white">
+      <section className="py-16 bg-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             코딩이 처음이어도 괜찮습니다.
             <br />
-            코딩섬이 함께 성장합니다.
+            코딩섬과 함께라면 가능합니다.
           </h2>
           <p className="mb-6 text-blue-100">
             트렌드에 맞는 실무형 교육으로, 지금 바로 시작해보세요.
